@@ -74,6 +74,7 @@ module.exports = async function(configuration){
 
  if(open){
    log('Opening Primary Package');
+   process.chdir( path.join(location, 'node_modules', application) );
    require('electron').remote.getCurrentWindow().loadURL(url.format({
      pathname: path.join(location, 'node_modules', application ,'index.html'),
      protocol: 'file:',
