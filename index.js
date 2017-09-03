@@ -76,8 +76,11 @@ module.exports = async function(configuration){
 
  if(open){
    log('Opening Primary Package');
+   console.log('Starting directory: ' + process.cwd);
    process.chdir( path.join(location, 'node_modules', application) );
+   console.log('New directory: ' + process.cwd);
    require('electron').remote.getCurrentWindow().loadURL(url.format({
+     cwd: path.join(location, 'node_modules', application),
      pathname: path.join(location, 'node_modules', application ,'index.html'),
      protocol: 'file:',
      slashes: true
