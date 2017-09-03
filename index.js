@@ -5,8 +5,6 @@ const url = require('url');
 const npm = require('npm');
 const mkdirp = require('mkdirp');
 
-const process = require('process');
-
 const initializeStorage = function({location}){
 
   const initData = {
