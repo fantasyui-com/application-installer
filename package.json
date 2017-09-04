@@ -1,6 +1,6 @@
 {
   "name": "application-installer",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Quickly install npm modules and launch them in electron.",
   "main": "index.js",
   "scripts": {
