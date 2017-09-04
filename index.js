@@ -48,7 +48,8 @@ const installCorePackage = function({location, name}){
 
 module.exports = async function(configuration){
 
- const {location, emitter, open, application, log, cwd} = configuration;
+ const {location, emitter, open, application, log} = configuration;
+ // const {location, emitter, open, application, log, cwd} = configuration;
 
  emitter.emit('application-installer-configuration', configuration)
 
@@ -75,7 +76,7 @@ module.exports = async function(configuration){
  if(open){
 
    log('Opening Primary Package');
-   cwd( path.join(location, 'node_modules', application) );
+   // cwd( path.join(location, 'node_modules', application) );
    require('electron').remote.getCurrentWindow().loadURL( url.format({
      pathname: path.join(location, 'node_modules', application ,'index.html'),
      protocol: 'file:',
