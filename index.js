@@ -73,15 +73,17 @@ module.exports = async function(configuration){
  progress.progress = 30;
 
  if(open){
-   log('Opening Primary Package');
 
+   log('Opening Primary Package');
+   cwd( path.join(location, 'node_modules', application) );
    require('electron').remote.getCurrentWindow().loadURL( url.format({
      pathname: path.join(location, 'node_modules', application ,'index.html'),
      protocol: 'file:',
      slashes: true
-   }), {cwd: path.join(location, 'node_modules', application)});
+   }));
 
    clearInterval(progressInterval);
+
  }
 
 
