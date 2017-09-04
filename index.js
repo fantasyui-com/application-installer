@@ -48,7 +48,7 @@ const installCorePackage = function({location, name}){
 
 module.exports = async function(configuration){
 
- const {location, emitter, open, application, log} = configuration;
+ const {location, emitter, open, application, log, cwd} = configuration;
 
  emitter.emit('application-installer-configuration', configuration)
 
