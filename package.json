@@ -4,14 +4,15 @@
   "description": "Quickly install npm modules and launch them in electron.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "save": "git add .; git commit -m 'New Release'; git push; npm version patch; npm publish; git push;"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fantasyui-com/application-installer.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "fantasyui.com <fantasyui.com@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fantasyui-com/application-installer/issues"
@@ -19,6 +20,6 @@
   "homepage": "https://github.com/fantasyui-com/application-installer#readme",
   "dependencies": {
     "mkdirp": "^0.5.1",
-    "npm": "^6.13.6"
+    "npm": "^7.20.6"
   }
 }
