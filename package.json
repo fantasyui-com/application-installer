@@ -20,6 +20,6 @@
   "homepage": "https://github.com/fantasyui-com/application-installer#readme",
   "dependencies": {
     "mkdirp": "^0.5.1",
-    "npm": "^8.12.2"
+    "npm": "^9.7.2"
   }
 }
